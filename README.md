@@ -9,7 +9,7 @@ This repo was made with the purpose of analysing how Hoare Logic can be applied 
 - DFS —
 - Dijkstra —
 
-## Como correr
+## Run
 
 ```
 dafny run (...)MainProof.dfy --solver-path (i)
