@@ -1,0 +1,14 @@
+C:\Users\joaom\Desktop\project\obj\Debug\net8.0\warshallMainProof.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joaom\Desktop\project\obj\Debug\net8.0\warshallMainProof.AssemblyInfoInputs.cache
+C:\Users\joaom\Desktop\project\obj\Debug\net8.0\warshallMainProof.AssemblyInfo.cs
+C:\Users\joaom\Desktop\project\obj\Debug\net8.0\warshallMainProof.csproj.CoreCompileInputs.cache
+C:\Users\joaom\Desktop\project\warshallMainProof.exe
+C:\Users\joaom\Desktop\project\obj\Debug\net8.0\warshallMainProof.dll
+C:\Users\joaom\Desktop\project\obj\Debug\net8.0\refint\warshallMainProof.dll
+C:\Users\joaom\Desktop\project\obj\Debug\net8.0\warshallMainProof.pdb
+C:\Users\joaom\Desktop\project\warshallMainProof.deps.json
+C:\Users\joaom\Desktop\project\obj\Debug\net8.0\warshallMainProof.genruntimeconfig.cache
+C:\Users\joaom\Desktop\project\warshallMainProof.runtimeconfig.json
+C:\Users\joaom\Desktop\project\warshallMainProof.dll
+C:\Users\joaom\Desktop\project\obj\Debug\net8.0\ref\warshallMainProof.dll
+C:\Users\joaom\Desktop\project\warshallMainProof.pdb
