@@ -2,10 +2,10 @@
     
     
     It = {}
-    G+ = G+ = G+ ∪ { (u,v) | (u,x) ∈ G+ ∧ (x,v) ∈ G+ }
+    G+ = G ∪ { (u,v) | (u,x) ∈ G+ ∧ (x,v) ∈ G+ }
     while (It != V)
         let x ∈ V - It
-        G+ = G+ = G+ ∪ { (u,v) | (u,x) ∈ G+ ∧ (x,v) ∈ G+ }
+        G+ = G ∪ { (u,v) | (u,x) ∈ G+ ∧ (x,v) ∈ G+ }
         It := It U {x}
 
     An invariant for this cicle could be: 
