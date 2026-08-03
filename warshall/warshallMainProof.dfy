@@ -42,8 +42,7 @@ predicate existsPath(adj: array2<bool>, u: int, v: int, k: int)
 method warshall(adj: array2 <bool>) returns (R: array2<bool>)
     requires adj.Length0 == adj.Length1
     ensures R.Length0 == adj.Length0 && R.Length1 == adj.Length1
-    ensures forall u, v | 0 <= u < adj.Length0 && 0 <= v < adj.Length1:: 
-                    R[u,v] <==> existsPath(adj, u, v, adj.Length0)
+    ensures forall u, v | 0 <= u < adj.Length0 && 0 <= v < adj.Length1:: R[u,v] <==> existsPath(adj, u, v, adj.Length0)
 
 {
     var n := adj.Length0;

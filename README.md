@@ -6,7 +6,7 @@ This repo was made with the purpose of analysing how Hoare Logic can be applied 
 ## Algorithms
 
 - Warshall — 
-- DFS —
+- DFT —
 - Dijkstra —
 
 ## Run
