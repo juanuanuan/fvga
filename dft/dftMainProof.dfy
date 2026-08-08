@@ -60,8 +60,49 @@ predicate fringeable(adj: array2<bool>, u: int, v: int, visited: set<int>)
 
 
 
-method depthFirstTreaversal()
+method dfRec(graph: array2<bool>, v: int, visited: set<int>) returns (count: int, newlyVisited: set<int>)
+    requires graph.Length0 == graph.Length1
+    requires 0 <= v < graph.Length0
+    requires v !in visited
+    requires graph.Length0 > 0
+    requires visited <= set x | 0 <= x < graph.Length0
+    requires |visited| <= graph.Length0
+    ensures newlyVisited >= visited + {v}
+    ensures count == |newlyVisited| - |visited|
+    ensures newlyVisited <= set x | 0 <= x < graph.Length0
+    decreases graph.Length0 - |visited|, 1
+
 
 {
-    //TODO: 
+    newlyVisited := visited + {v};
+    assert v in (set x | 0 <= x < graph.Length0);
+    assert newlyVisited <= set x | 0 <= x < graph.Length0;
+    assert v !in visited;
+    assert |newlyVisited| == |visited| + 1;
+    count := 1;
+    var it :=  0;
+    assert it >= 0;
+    setcardinality(graph.Length0);
+    while it < graph.Length0
+        invariant 0 <= it <= graph.Length0
+        invariant count == |newlyVisited| - |visited| 
+        invariant newlyVisited >= visited + {v}
+        invariant newlyVisited <= set x | 0 <= x < graph.Length0
+        invariant forall k | 0 <= k < it && graph[v, k] :: k in newlyVisited 
+        decreases graph.Length0 - it 
+    {
+        if graph[v, it] && it !in newlyVisited {
+            subsetcardinality(visited + {v}, newlyVisited);
+            assert |newlyVisited| > |visited|;
+            subsetcardinality(newlyVisited, set x | 0 <= x < graph.Length0);
+            var c, nv := dfRec(graph, it, newlyVisited);
+            count := count + c; 
+            newlyVisited := nv;
+            
+        }
+        it := it + 1;
+    }
 }
+
+
+method dfTraversal(graph: array2<bool>, origin: int) returns (a: int)
